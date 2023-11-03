@@ -48,19 +48,27 @@ $w1440: "min-width: 1441px";
 @mixin w1440 { @media ($w1440) {@content;} }
 
 @font-face {
-  font-family: Carbon;
+  font-family: Satoshi;
   font-weight: bold;
-  src: url('../fonts/carbon-bold.woff') format('woff');
+  text-transform: uppercase;
+  src: url('../fonts/satoshi-bold.woff2') format('woff2');
 }
 
-@mixin carbon {
-	font-family: "Carbon", sans-serif;
+@font-face {
+  font-family: Satoshi;
+  font-weight: 900;
+  text-transform: uppercase;
+  src: url('../fonts/satoshi-black.woff2') format('woff2');
+}
+
+@mixin satoshi {
+	font-family: "Satoshi", sans-serif;
 	font-weight: bold;
 	line-height: 1.0;
 }
 
 .btn {
-	@include carbon;
+	@include satoshi;
 
 	display: inline-block;
 	height: 42px;
@@ -102,12 +110,11 @@ $w1440: "min-width: 1441px";
 }
 
 .slub {
-	@include carbon;
+	@include satoshi;
 
 	margin-bottom: 4px;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: bold;
-	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	opacity: 0.8;
 }
@@ -166,7 +173,9 @@ html {
 }
 
 h1, h2, h3 {
-	@include carbon;
+	@include satoshi;
+
+	font-weight: 900;
 }
 
 h1 {
@@ -181,7 +190,7 @@ h1 {
 	@include w600 {
 		margin-bottom: 24px;
 		padding-bottom: 8px;
-		font-size: 64px;
+		font-size: 60px;
 	}
 }
 
@@ -190,7 +199,7 @@ h2 {
 	text-transform: uppercase;
 	letter-spacing: 0.07em;
 	font-size: 30px;
-	line-height: 85%;
+	line-height: 120%;
 	border-bottom: var(--border);
 
 	@include w600 {
@@ -207,11 +216,11 @@ h2 {
 
 	&.h2--smaller {
 		@include w600 {
-			font-size: 40px;
+			font-size: 30px;
 		}
 
 		@include w800 {
-			font-size: 48px;
+			font-size: 40px;
 		}
 	}
 }
@@ -219,7 +228,7 @@ h2 {
 h3 {
 	margin-bottom: 16px;
 	font-size: 24px;
-	line-height: 85%;
+	line-height: 120%;
 	border-bottom: var(--border);
 
 	@include w800 {
@@ -358,7 +367,9 @@ header {
 			}
 
 				.contact-link__value {
-					@include carbon;
+					font-weight: 500;
+    			line-height: 1.1;
+    			font-size: 14px;
 				}
 
 		.header__btn {
@@ -376,8 +387,6 @@ header {
 // SIDEBAR
 
 .side-nav {
-	@include carbon;
-
 	display: none;
 
 	@include w1100 {
@@ -460,7 +469,7 @@ header {
 	}
 
 	.atf__subhead {
-		@include carbon;
+		@include satoshi;
 
 		margin-bottom: 32px;
 		font-size: 20px;
@@ -520,7 +529,6 @@ header {
 
 	.floating-image-wrapper {
 		display: none;
-		margin-bottom: 300px;
 
 		@include w700 {
 			grid-row: span 2;
@@ -662,7 +670,7 @@ header {
 		}
 
 		.class-day-of-week {
-			@include carbon;
+			@include satoshi;
 			font-size: 20px;
 		}
 
@@ -783,7 +791,7 @@ footer {
 
 	a {
 		@include unstyled-link;
-		@include carbon;
+		@include satoshi;
 
 		&:hover {
 			text-decoration: underline;
