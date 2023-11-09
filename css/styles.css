@@ -70,13 +70,13 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: Satoshi;
   font-weight: bold;
   text-transform: uppercase;
-  src: url("../fonts/satoshi-bold.woff2") format("woff2");
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: Satoshi;
   font-weight: 900;
   text-transform: uppercase;
-  src: url("../fonts/satoshi-black.woff2") format("woff2");
+  src: url("../fonts/Satoshi-Black.woff2") format("woff2");
 }
 .btn {
   font-family: "Satoshi", sans-serif;

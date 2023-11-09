@@ -51,14 +51,14 @@ $w1440: "min-width: 1441px";
   font-family: Satoshi;
   font-weight: bold;
   text-transform: uppercase;
-  src: url('../fonts/satoshi-bold.woff2') format('woff2');
+  src: url('../fonts/Satoshi-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: Satoshi;
   font-weight: 900;
   text-transform: uppercase;
-  src: url('../fonts/satoshi-black.woff2') format('woff2');
+  src: url('../fonts/Satoshi-Black.woff2') format('woff2');
 }
 
 @mixin satoshi {
