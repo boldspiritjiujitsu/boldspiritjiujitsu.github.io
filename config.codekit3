@@ -592,6 +592,17 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/img\/Mychal_2.webp" : {
+      "ft" : 8388608,
+      "iS" : 432956,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_2.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/img\/mychal.png" : {
       "ft" : 32768,
       "iS" : 58815,
