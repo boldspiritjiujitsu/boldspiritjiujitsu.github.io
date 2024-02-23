@@ -692,7 +692,7 @@ header {
 			}
 
 			.only-class-of-the-day {
-				grid-column: span 3;
+				grid-column: span 1;
 
 				@include w700 {
 					grid-row: span 3;
