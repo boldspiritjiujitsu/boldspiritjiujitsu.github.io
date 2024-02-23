@@ -651,8 +651,8 @@ header {
 
 		@include w700 {
 			grid-template-columns: repeat(7, 1fr);
-			grid-template-rows: 36px 1fr 1fr 1fr;
-	  		grid-auto-flow: column;
+			grid-template-rows: 36px 1fr 1fr;
+	  		grid-auto-flow: column;row
 	  		border-top: none;
 		}
 	}
@@ -692,10 +692,10 @@ header {
 			}
 
 			.only-class-of-the-day {
-				grid-column: span 2;
+				grid-column: span 3;
 
 				@include w700 {
-					grid-row: span 2;
+					grid-row: span 3;
 					grid-column: inherit;
 				}
 			}
