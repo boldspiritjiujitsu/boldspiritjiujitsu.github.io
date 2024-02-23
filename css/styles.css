@@ -663,7 +663,7 @@ header {
 @media (min-width: 700px) {
   .calendar {
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 36px 1fr 1fr;
+    grid-template-rows: 36px 1fr 1fr 1fr;
     grid-auto-flow: column;
     border-top: none;
   }
