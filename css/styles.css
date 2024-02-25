@@ -657,7 +657,7 @@ header {
 
 .calendar {
   display: grid;
-  grid-template-columns: 90px 1.5fr 1.5fr;
+  grid-template-columns: 90px 1.5fr 1.5fr 1.5fr;
   border-top: var(--border);
 }
 @media (min-width: 700px) {
