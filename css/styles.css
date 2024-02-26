@@ -692,6 +692,7 @@ header {
 
 .class-details {
   margin-bottom: 0;
+  padding-right: .5
 }
 @media (min-width: 700px) {
   .class-details {
@@ -710,11 +711,7 @@ header {
 
 .only-class-of-the-day {
   grid-column: span 2;
-	.class-day-of-week,
-	.class-details {
- 	   border-bottom: var(--border);
-	   padding-top: 12px;
- 	   padding-bottom: 12px;
+  
 }
 }
 @media (min-width: 700px) {
