@@ -716,7 +716,7 @@ header {
 }
 @media (min-width: 700px) {
   .only-class-of-the-day {
-    grid-row: span 2;
+    grid-row: span 3;
     grid-column: inherit;
   }
 }
