@@ -710,7 +710,7 @@ header {
 }
 
 .only-class-of-the-day {
-  grid-column: span 2;
+  grid-column: span 3;
   
 }
 }
