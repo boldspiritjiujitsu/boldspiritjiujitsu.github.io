@@ -646,7 +646,7 @@ header {
 
 	.calendar {
 		display: grid;
-		grid-template-columns: 90px 1.5fr 1.5fr;
+		grid-template-columns: 70px 1.5fr 1.5fr 1.5fr;
 		border-top: var(--border);
 
 		@include w700 {
@@ -691,14 +691,14 @@ header {
 				font-weight: bold;
 			}
 
-			.only-class-of-the-day {
-				grid-column: span 2;
+			// .only-class-of-the-day {
+			// 	grid-column: span 2;
 
-				@include w700 {
-					grid-row: span 3;
-					grid-column: inherit;
-				}
-			}
+			// 	@include w700 {
+			// 		grid-row: span 3;
+			// 		grid-column: inherit;
+			// 	}
+			// }
 
 // INSTRUCTORS SECTION
 

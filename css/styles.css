@@ -657,14 +657,14 @@ header {
 
 .calendar {
   display: grid;
-  grid-template-columns: 90px 1.5fr 1.5fr 1.5fr;
+  grid-template-columns: 70px 1.5fr 1.5fr 1.5fr;
   border-top: var(--border);
 }
 @media (min-width: 700px) {
   .calendar {
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 36px 1fr 1fr 1fr;
-    grid-auto-flow: column;row
+    grid-auto-flow: column;
     border-top: none;
   }
 }
@@ -692,7 +692,6 @@ header {
 
 .class-details {
   margin-bottom: 0;
-  padding-right: .5
 }
 @media (min-width: 700px) {
   .class-details {
@@ -707,18 +706,6 @@ header {
 
 .class-name {
   font-weight: bold;
-}
-
-.only-class-of-the-day {
-  grid-column: span 3;
-  
-}
-}
-@media (min-width: 700px) {
-  .only-class-of-the-day {
-    grid-row: span 3;
-    grid-column: inherit;
-  }
 }
 
 .instructor-list {
