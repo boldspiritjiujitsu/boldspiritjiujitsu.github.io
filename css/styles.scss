@@ -13,8 +13,6 @@
 	--sidebar-width: 160px;
 }
 
-
-
 /*****************************************
 				 HELPERS
 *****************************************/
@@ -160,7 +158,6 @@ $w1440: "min-width: 1441px";
 	}
 }
 
-
 /*****************************************
 			  HTML ELEMENTS
 *****************************************/
@@ -210,10 +207,6 @@ h2 {
 		font-size: 64px;
 	}
 
-	// @include w1100 {
-	// 	padding-top: var(--header-height);
-	// }
-
 	&.h2--smaller {
 		@include w600 {
 			font-size: 30px;
@@ -262,9 +255,6 @@ main section {
 		padding-left: 0;
 	}
 }
-
-
-
 
 /*****************************************
 				PAGE STYLES
@@ -368,8 +358,8 @@ header {
 
 				.contact-link__value {
 					font-weight: 500;
-    			line-height: 1.1;
-    			font-size: 14px;
+    				line-height: 1.1;
+    				font-size: 14px;
 				}
 
 		.header__btn {
@@ -504,7 +494,7 @@ header {
 // ABOUT SECTION
 
 .about-wrapper {
-	@extend section;
+	@extend main section;
 	position: relative;
 
 	@include w700 {
@@ -656,55 +646,63 @@ header {
 	  		border-top: none;
 		}
 	}
+
 		.class-day-of-week:nth-child(7n+1),
 		.class-details:nth-child(7n+1),
 		.only-class-of-the-day:nth-child(7n+1) {
 			@include w700 {
-				grid-column:1;
+				grid-column: 1;
 			}
-}
+		}
+
 		.class-day-of-week:nth-child(7n+2),
 		.class-details:nth-child(7n+2),
 		.only-class-of-the-day:nth-child(7n+2) {
 			@include w700 {
-				grid-column:2;
+				grid-column: 2;
 			}
-}
+		}
+
 		.class-day-of-week:nth-child(7n+3),
 		.class-details:nth-child(7n+3),
 		.only-class-of-the-day:nth-child(7n+3) {
 			@include w700 {
-				grid-column:3;
+				grid-column: 3;
 			}
-}
+		}
+
 		.class-day-of-week:nth-child(7n+4),
 		.class-details:nth-child(7n+4),
 		.only-class-of-the-day:nth-child(7n+4) {
 			@include w700 {
-				grid-column:4;
+				grid-column: 4;
 			}
-}
+		}
+
 		.class-day-of-week:nth-child(7n+5),
 		.class-details:nth-child(7n+5),
 		.only-class-of-the-day:nth-child(7n+5) {
 			@include w700 {
-				grid-column:5;
+				grid-column: 5;
 			}
-}
+		}
+
 		.class-day-of-week:nth-child(7n+6),
 		.class-details:nth-child(7n+6),
 		.only-class-of-the-day:nth-child(7n+6) {
 			@include w700 {
-				grid-column:6;
+				grid-column: 6;
 			}
-}
+		}
+
 		.class-day-of-week:nth-child(7n+7),
 		.class-details:nth-child(7n+7),
 		.only-class-of-the-day:nth-child(7n+7) {
 			@include w700 {
-				grid-column:7;
+				grid-column: 7;
 			}
-}
+		}
+
 		.class-day-of-week,
 		.class-details {
 			border-bottom: var(--border);
@@ -729,30 +727,31 @@ header {
 				padding-bottom: 16px;
 				border-bottom: none;
 			}
+
 			&:empty {
-      			  	border-bottom: none;
+      			border-bottom: none;
    			}
 		}
 
-			.class-time {
-				opacity: 0.7;
-			}
+		.class-time {
+			opacity: 0.7;
+		}
 
-			.class-name {
-				font-weight: bold;
-			}
+		.class-name {
+			font-weight: bold;
+		}
 
-			.only-class-of-the-day {
-				grid-column: span 3;
-				padding-top: 12px;
-				padding-bottom: 12px;
+		.only-class-of-the-day {
+			grid-column: span 3;
+			padding-top: 12px;
+			padding-bottom: 12px;
 
-				@include w700 {
+			@include w700 {
 				grid-row: span 4;
-			 	grid-column: inherit;
+				grid-column: inherit;
 				padding: 8px;
 			}
-		 }
+		}
 
 // INSTRUCTORS SECTION
 
@@ -794,6 +793,7 @@ header {
 			float: right;
 			margin-top: 8px;
 		}
+
 			.blue-belt {background-image: url(../img/blue-belt.svg);}
 			.purple-belt {background-image: url(../img/purple-belt.svg);}
 			.brown-belt {background-image: url(../img/brown-belt.svg);}
@@ -811,8 +811,7 @@ header {
 
 	.sign-up__img {
 		@extend .classes__img;
-
-		max-width: 66%
+		max-width: 66%;
 	}
 
 	.sign-up__subhead {
