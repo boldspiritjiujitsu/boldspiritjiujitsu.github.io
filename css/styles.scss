@@ -646,7 +646,7 @@ header {
 
 	.calendar {
 		display: grid;
-		grid-template-columns: 70px 1.5fr 1.5fr 1.5fr 1.5fr;
+		grid-template-columns: 70px 1.5fr 1.5fr 1.5fr;
 		border-top: var(--border);
 
 		@include w700 {
@@ -681,6 +681,9 @@ header {
 				padding-bottom: 16px;
 				border-bottom: none;
 			}
+			&:empty {
+      			  	border-bottom: none; /* Hide borders for empty placeholders */
+   			}
 		}
 
 			.class-time {
@@ -692,7 +695,7 @@ header {
 			}
 
 			// .only-class-of-the-day {
-			// 	grid-column: span 2;
+			// 	grid-column: span 3;
 
 			// 	@include w700 {
 			// 		grid-row: span 4;
