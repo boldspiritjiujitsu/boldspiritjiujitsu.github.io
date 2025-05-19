@@ -631,11 +631,11 @@ header {
 // SCHEDULE SECTION
 
 .schedule {
-    @include w700 {
+	@include w700 {
         background: no-repeat top right 12px url(../img/bold-spirit-watermark.svg);
     }
 
-    @include w1100 {
+	@include w1100 {
         background: no-repeat top right calc(var(--sidebar-width) + 12px) url(../img/bold-spirit-watermark.svg);
     }
 }
@@ -657,103 +657,103 @@ header {
     }
 }
 
-.class-day-of-week:nth-child(7n+1),
-.class-details:nth-child(7n+1),
-.only-class-of-the-day:nth-child(7n+1) {
-    @include w700 {
-        grid-column: 1;
+	.class-day-of-week:nth-child(7n+1),
+	.class-details:nth-child(7n+1),
+	.only-class-of-the-day:nth-child(7n+1) {
+  	  @include w700 {
+  	      grid-column: 1;
     }
 }
-.class-day-of-week:nth-child(7n+2),
-.class-details:nth-child(7n+2),
-.only-class-of-the-day:nth-child(7n+2) {
-    @include w700 {
-        grid-column: 2;
+	.class-day-of-week:nth-child(7n+2),
+	.class-details:nth-child(7n+2),
+	.only-class-of-the-day:nth-child(7n+2) {
+	    @include w700 {
+   	     grid-column: 2;
     }
 }
-.class-day-of-week:nth-child(7n+3),
-.class-details:nth-child(7n+3),
-.only-class-of-the-day:nth-child(7n+3) {
-    @include w700 {
-        grid-column: 3;
+	.class-day-of-week:nth-child(7n+3),
+	.class-details:nth-child(7n+3),
+	.only-class-of-the-day:nth-child(7n+3) {
+	    @include w700 {
+   	     grid-column: 3;
     }
 }
-.class-day-of-week:nth-child(7n+4),
-.class-details:nth-child(7n+4),
-.only-class-of-the-day:nth-child(7n+4) {
-    @include w700 {
-        grid-column: 4;
+	.class-day-of-week:nth-child(7n+4),
+	.class-details:nth-child(7n+4),
+	.only-class-of-the-day:nth-child(7n+4) {
+ 	   @include w700 {
+    	    grid-column: 4;
     }
 }
-.class-day-of-week:nth-child(7n+5),
-.class-details:nth-child(7n+5),
-.only-class-of-the-day:nth-child(7n+5) {
-    @include w700 {
-        grid-column: 5;
+	.class-day-of-week:nth-child(7n+5),
+	.class-details:nth-child(7n+5),
+	.only-class-of-the-day:nth-child(7n+5) {
+	    @include w700 {
+     		grid-column: 5;
     }
 }
-.class-day-of-week:nth-child(7n+6),
-.class-details:nth-child(7n+6),
-.only-class-of-the-day:nth-child(7n+6) {
-    @include w700 {
-        grid-column: 6;
+	.class-day-of-week:nth-child(7n+6),
+	.class-details:nth-child(7n+6),
+	.only-class-of-the-day:nth-child(7n+6) {
+	    @include w700 {
+       		 grid-column: 6;
     }
 }
-.class-day-of-week:nth-child(7n+7),
-.class-details:nth-child(7n+7),
-.only-class-of-the-day:nth-child(7n+7) {
-    @include w700 {
-        grid-column: 7;
-    }
-}
-
-.class-day-of-week,
-.class-details {
-    border-bottom: var(--border);
-    padding-top: 12px;
-    padding-bottom: 12px;
-
-    @include w700 {
-        border-left: var(--border);
-        padding: 8px;
+	.class-day-of-week:nth-child(7n+7),
+	.class-details:nth-child(7n+7),
+	.only-class-of-the-day:nth-child(7n+7) {
+  	  @include w700 {
+       		 grid-column: 7;
     }
 }
 
-.class-day-of-week {
-    @include satoshi;
-    font-size: 20px;
-}
+	.class-day-of-week,
+	.class-details {
+  	  border-bottom: var(--border);
+   	 padding-top: 12px;
+   	 padding-bottom: 12px;
 
-.class-details {
-    margin-bottom: 0;
-
-    @include w700 {
-        padding-bottom: 16px;
-        border-bottom: none;
-    }
-
-    &:empty {
-        border-bottom: none;
+   	 @include w700 {
+        	border-left: var(--border);
+        	padding: 8px;
     }
 }
 
-.class-time {
-    opacity: 0.7;
+	.class-day-of-week {
+  	  @include satoshi;
+   		 font-size: 20px;
 }
 
-.class-name {
-    font-weight: bold;
+	.class-details {
+  	  margin-bottom: 0;
+
+  	  @include w700 {
+        	padding-bottom: 16px;
+        	border-bottom: none;
+    }
+
+   	 &:empty {
+       	 border-bottom: none;
+    }
 }
 
-.only-class-of-the-day {
-    grid-column: span 3;
-    padding-top: 12px;
-    padding-bottom: 12px;
+	.class-time {
+   		 opacity: 0.7;
+}
 
-    @include w700 {
-        grid-row: span 4;
-        grid-column: inherit;
-        padding: 8px;
+	.class-name {
+  		  font-weight: bold;
+}
+
+	.only-class-of-the-day {
+    		grid-column: span 3;
+    		padding-top: 12px;
+    		padding-bottom: 12px;
+
+  	  @include w700 {
+        	grid-row: span 4;
+        	grid-column: inherit;
+        	padding: 8px;
     }
 }
 
