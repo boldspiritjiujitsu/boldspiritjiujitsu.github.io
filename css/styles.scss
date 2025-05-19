@@ -646,12 +646,12 @@ header {
 
 	.calendar {
 		display: grid;
-		grid-template-columns: 70px 1.5fr 1.5fr 1.5fr;
+		grid-template-columns: 70px 1.5fr 1.5fr 1.5fr 1.5fr;
 		border-top: var(--border);
 
 		@include w700 {
 			grid-template-columns: repeat(7, 1fr);
-			grid-template-rows: 36px 1fr 1fr 1fr;
+			grid-template-rows: 36px repeat(4, 1fr);
 	  		grid-auto-flow: column;
 	  		border-top: none;
 		}
@@ -695,7 +695,7 @@ header {
 			// 	grid-column: span 2;
 
 			// 	@include w700 {
-			// 		grid-row: span 3;
+			// 		grid-row: span 4;
 			// 		grid-column: inherit;
 			// 	}
 			// }
