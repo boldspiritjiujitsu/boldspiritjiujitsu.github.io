@@ -664,32 +664,28 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: auto; /* Let rows size naturally */
   }
+  .day-wrapper {
+    margin-bottom: 16px; /* Space between days */
+  }
   .class-day-of-week {
     font-size: 18px; /* Larger for header */
-    padding: 8px 4px;
-    margin-top: 16px; /* Increased space before each day */
-    border-bottom: 2px solid #000; /* Stronger separator */
-    background-color: #f0f0f0; /* Light background */
-    display: block; /* Ensure it takes full width */
+    padding: 10px 4px;
+    border-bottom: 3px solid #000; /* Strong separator */
+    background-color: #e0e0e0; /* Distinct background */
+    display: block; /* Ensure full width */
   }
-  /* Target details following each day */
-  .class-day-of-week + .class-details {
-    padding: 6px 4px 6px 16px; /* Indent for hierarchy */
+  .class-details {
+    padding: 8px 4px 8px 20px; /* Indent for hierarchy */
     font-size: 14px;
-    border-bottom: 1px solid #ccc; /* Lighter border for details */
+    border-bottom: 1px dashed #999; /* Lighter separator */
   }
-  .class-day-of-week + .class-details:empty {
+  .class-details:empty {
     display: none; /* Hide empty details */
   }
-  /* Ensure only the first detail after each day is indented initially */
-  .class-details + .class-details {
-    padding: 6px 4px 6px 16px; /* Consistent indentation */
-    border-bottom: 1px solid #ccc;
-  }
   .only-class-of-the-day {
-    padding: 6px 4px 6px 16px; /* Match indentation */
+    padding: 8px 4px 8px 20px; /* Match indentation */
     font-size: 14px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px dashed #999;
   }
 }
 @media (min-width: 700px) {
@@ -698,6 +694,10 @@ header {
     grid-template-rows: 36px repeat(5, 1fr); /* 5 rows for desktop */
     grid-auto-flow: row;
     border-top: none;
+  }
+  /* Ensure day-wrapper doesn't interfere with desktop grid */
+  .day-wrapper {
+    display: contents; /* Makes day-wrapper invisible to the grid */
   }
   /* Assign days to first row, in correct order */
   .class-day-of-week:nth-child(1) { grid-column: 1; grid-row: 1; } /* Mon */
