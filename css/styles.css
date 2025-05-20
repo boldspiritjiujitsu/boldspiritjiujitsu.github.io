@@ -664,25 +664,30 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: auto; /* Let rows size naturally */
   }
-  .calendar > div {
-    display: flex;
-    flex-direction: column;
-  }
   .class-day-of-week {
-    font-size: 16px; /* Slightly larger for header */
-    padding: 6px 4px;
-    border-bottom: var(--border);
+    font-size: 18px; /* Larger for header-like appearance */
+    padding: 8px 4px;
+    margin-top: 12px; /* Space above each day */
+    border-bottom: 2px solid #000; /* Thicker border to separate days */
+    background-color: #f5f5f5; /* Light background for emphasis */
   }
   .class-details {
-    padding: 4px;
+    padding: 4px 4px 4px 12px; /* Indent details for hierarchy */
     font-size: 14px; /* Smaller text for readability */
     border-bottom: var(--border);
+  }
+  .class-details:empty {
+    display: none; /* Hide empty details to reduce clutter */
+  }
+  .only-class-of-the-day {
+    padding: 4px 4px 4px 12px; /* Match indentation */
+    font-size: 14px;
   }
 }
 @media (min-width: 700px) {
   .calendar {
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 36px repeat(5, 1fr); /* Reduced to 5 rows */
+    grid-template-rows: 36px repeat(5, 1fr); /* 5 rows for desktop */
     grid-auto-flow: row;
     border-top: none;
   }
@@ -715,9 +720,9 @@ header {
   .class-details:nth-child(10) { grid-column: 2; grid-row: 3; } /* Tue (empty) */
   .class-details:nth-child(15) { grid-column: 3; grid-row: 3; } /* Wed (empty) */
   .class-details:nth-child(19) { grid-column: 4; grid-row: 3; } /* Thu (empty) */
-  .class-details:nth-child(20) { grid-column: 4; grid-row: 5; } /* Thu (empty, moved from row 6) */
+  .class-details:nth-child(20) { grid-column: 4; grid-row: 5; } /* Thu (empty) */
   .class-details:nth-child(24) { grid-column: 5; grid-row: 5; } /* Fri (empty) */
-  .class-details:nth-child(25) { grid-column: 5; grid-row: 5; } /* Fri (empty, merged with above) */
+  .class-details:nth-child(25) { grid-column: 5; grid-row: 5; } /* Fri (empty) */
   .class-details:nth-child(29) { grid-column: 6; grid-row: 4; } /* Sat (empty) */
   .class-details:nth-child(30) { grid-column: 6; grid-row: 5; } /* Sat (empty) */
   .class-details:nth-child(32) { grid-column: 7; grid-row: 3; } /* Sun (empty) */
