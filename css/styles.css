@@ -665,23 +665,31 @@ header {
     grid-template-rows: auto; /* Let rows size naturally */
   }
   .class-day-of-week {
-    font-size: 18px; /* Larger for header-like appearance */
+    font-size: 18px; /* Larger for header */
     padding: 8px 4px;
-    margin-top: 12px; /* Space above each day */
-    border-bottom: 2px solid #000; /* Thicker border to separate days */
-    background-color: #f5f5f5; /* Light background for emphasis */
+    margin-top: 16px; /* Increased space before each day */
+    border-bottom: 2px solid #000; /* Stronger separator */
+    background-color: #f0f0f0; /* Light background */
+    display: block; /* Ensure it takes full width */
   }
-  .class-details {
-    padding: 4px 4px 4px 12px; /* Indent details for hierarchy */
-    font-size: 14px; /* Smaller text for readability */
-    border-bottom: var(--border);
+  /* Target details following each day */
+  .class-day-of-week + .class-details {
+    padding: 6px 4px 6px 16px; /* Indent for hierarchy */
+    font-size: 14px;
+    border-bottom: 1px solid #ccc; /* Lighter border for details */
   }
-  .class-details:empty {
-    display: none; /* Hide empty details to reduce clutter */
+  .class-day-of-week + .class-details:empty {
+    display: none; /* Hide empty details */
+  }
+  /* Ensure only the first detail after each day is indented initially */
+  .class-details + .class-details {
+    padding: 6px 4px 6px 16px; /* Consistent indentation */
+    border-bottom: 1px solid #ccc;
   }
   .only-class-of-the-day {
-    padding: 4px 4px 4px 12px; /* Match indentation */
+    padding: 6px 4px 6px 16px; /* Match indentation */
     font-size: 14px;
+    border-bottom: 1px solid #ccc;
   }
 }
 @media (min-width: 700px) {
