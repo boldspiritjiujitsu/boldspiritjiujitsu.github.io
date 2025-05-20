@@ -11,7 +11,6 @@
 * {
   margin: 0;
 }
-
 /*
   Typographic tweaks!
   3. Add accessible line-height
@@ -657,7 +656,7 @@ header {
 
 .calendar {
   display: grid;
-  grid-template-columns: 70px 1.5fr 1.5fr 1.5fr 1.5fr;
+  grid-template-columns: 70px 1.5fr 1.5fr; /* Reduced to 3 columns for mobile */
   border-top: var(--border);
 }
 @media (min-width: 700px) {
@@ -681,6 +680,7 @@ header {
   .class-details:nth-child(27) { grid-column: 6; grid-row: 2; } /* Sat 10-11:30am */
   .class-details:nth-child(3) { grid-column: 1; grid-row: 3; }  /* Mon 4:15-5pm */
   .class-details:nth-child(12) { grid-column: 3; grid-row: 3; } /* Wed 4:15-5pm */
+  .class-details:nth-child(28) { grid-column: 6; grid-row: 3; } /* Sat 12-1pm */
   .class-details:nth-child(4) { grid-column: 1; grid-row: 4; }  /* Mon 5-6pm */
   .class-details:nth-child(8) { grid-column: 2; grid-row: 4; }  /* Tue 5-6pm */
   .class-details:nth-child(13) { grid-column: 3; grid-row: 4; } /* Wed 5-6pm */
@@ -690,7 +690,6 @@ header {
   .class-details:nth-child(9) { grid-column: 2; grid-row: 5; }  /* Tue 6-7:30pm */
   .class-details:nth-child(14) { grid-column: 3; grid-row: 5; } /* Wed 6-7:30pm */
   .class-details:nth-child(18) { grid-column: 4; grid-row: 5; } /* Thu 6-7:30pm */
-  .class-details:nth-child(28) { grid-column: 6; grid-row: 6; } /* Sat 12-1pm */
   /* Fill empty slots to maintain grid */
   .class-details:nth-child(10) { grid-column: 2; grid-row: 3; } /* Tue (empty) */
   .class-details:nth-child(15) { grid-column: 3; grid-row: 3; } /* Wed (empty) */
@@ -699,8 +698,8 @@ header {
   .class-details:nth-child(23) { grid-column: 5; grid-row: 3; } /* Fri (empty) */
   .class-details:nth-child(24) { grid-column: 5; grid-row: 5; } /* Fri (empty) */
   .class-details:nth-child(25) { grid-column: 5; grid-row: 6; } /* Fri (empty) */
-  .class-details:nth-child(29) { grid-column: 6; grid-row: 3; } /* Sat (empty) */
-  .class-details:nth-child(30) { grid-column: 6; grid-row: 4; } /* Sat (empty) */
+  .class-details:nth-child(29) { grid-column: 6; grid-row: 4; } /* Sat (empty) */
+  .class-details:nth-child(30) { grid-column: 6; grid-row: 5; } /* Sat (empty) */
   .class-details:nth-child(32) { grid-column: 7; grid-row: 3; } /* Sun (empty) */
   .class-details:nth-child(33) { grid-column: 7; grid-row: 4; } /* Sun (empty) */
   .class-details:nth-child(34) { grid-column: 7; grid-row: 5; } /* Sun (empty) */
