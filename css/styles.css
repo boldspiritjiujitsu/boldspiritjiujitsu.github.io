@@ -393,7 +393,7 @@ header {
     margin-top: var(--header-height);
     border-left: var(--border);
     padding-top: 8px;
-    z-index: 2;
+    z-index: 0;
   }
 }
 
@@ -665,6 +665,8 @@ header {
   border-top: var(--border);
   width: 100%; /* Ensure it takes full width */
   box-sizing: border-box;
+  position: relative; /* Ensure z-index applies */
+  z-index: 1; /* Ensure calendar is above other elements if needed */
 }
 @media (max-width: 700px) {
   .calendar {
@@ -698,10 +700,10 @@ header {
 @media (min-width: 700px) {
   .calendar {
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 36px repeat(5, 100px); /* Fixed height for rows */
+    grid-template-rows: 36px repeat(4, 100px); /* 4 content rows + 1 header row */
     grid-auto-flow: row;
     border-top: none;
-    min-height: 536px; /* 36px (header) + 5 * 100px (rows) */
+    min-height: 436px; /* 36px (header) + 4 * 100px (rows) */
     width: 100%;
   }
   /* Ensure day-wrapper children participate in the grid */
@@ -721,18 +723,14 @@ header {
   .day-wrapper:nth-child(1) .class-details:nth-child(2) { grid-column: 1; grid-row: 2; } /* Mon 10-11:30am */
   .day-wrapper:nth-child(1) .class-details:nth-child(3) { grid-column: 1; grid-row: 3; } /* Mon 4:15-5pm */
   .day-wrapper:nth-child(1) .class-details:nth-child(4) { grid-column: 1; grid-row: 4; } /* Mon 5-6pm */
-  .day-wrapper:nth-child(1) .class-details:nth-child(5) { grid-column: 1; grid-row: 5; } /* Mon 6-7:30pm */
   /* Tuesday */
   .day-wrapper:nth-child(2) .class-details:nth-child(2) { grid-column: 2; grid-row: 2; } /* Tue 10-11:30am */
   .day-wrapper:nth-child(2) .class-details:nth-child(3) { grid-column: 2; grid-row: 4; } /* Tue 5-6pm */
-  .day-wrapper:nth-child(2) .class-details:nth-child(4) { grid-column: 2; grid-row: 5; } /* Tue 6-7:30pm */
   /* Wednesday */
   .day-wrapper:nth-child(3) .class-details:nth-child(2) { grid-column: 3; grid-row: 3; } /* Wed 4:15-5pm */
   .day-wrapper:nth-child(3) .class-details:nth-child(3) { grid-column: 3; grid-row: 4; } /* Wed 5-6pm */
-  .day-wrapper:nth-child(3) .class-details:nth-child(4) { grid-column: 3; grid-row: 5; } /* Wed 6-7:30pm */
   /* Thursday */
-  .day-wrapper:nth-child(4) .class-details:nth-child(2) { grid-column: 4; grid-row: 4; } /* Thu 5-6pm */
-  .day-wrapper:nth-child(4) .class-details:nth-child(3) { grid-column: 4; grid-row: 5; } /* Thu 6-7:30pm */
+  .day-wrapper:nth-child(4) .class-details:nth-child(2) { grid-column: 4; grid-row 4; } /* Thu 5-6pm */
   /* Friday */
   .day-wrapper:nth-child(5) .class-details:nth-child(2) { grid-column: 5; grid-row: 3; } /* Fri 4-5pm */
   .day-wrapper:nth-child(5) .class-details:nth-child(3) { grid-column: 5; grid-row: 4; } /* Fri 5-6pm */
@@ -741,6 +739,12 @@ header {
   .day-wrapper:nth-child(6) .class-details:nth-child(3) { grid-column: 6; grid-row: 3; } /* Sat 12-1pm */
   /* Sunday */
   .day-wrapper:nth-child(7) .only-class-of-the-day:nth-child(2) { grid-column: 7; grid-row: 2 / span 4; } /* Sun Rest */
+  /* Ensure empty details don’t affect layout */
+  .class-details:empty {
+    display: none !important; /* Force hide empty details */
+    height: 0;
+    padding: 0;
+  }
 }
 .class-day-of-week,
 .class-details {
