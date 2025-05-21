@@ -1,4 +1,5 @@
-1. Use a more-intuitive box-sizing model.
+/*
+  1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -10,6 +11,7 @@
 * {
   margin: 0;
 }
+
 /*
   Typographic tweaks!
   3. Add accessible line-height
@@ -17,7 +19,7 @@
 */
 body {
   line-height: 1.5;
-  /*  -webkit-font-smoothing: antialiased;*/
+  /* -webkit-font-smoothing: antialiased; */
 }
 
 /*
@@ -146,6 +148,14 @@ p, h1, h2, h3, h4, h5, h6 {
   .cta-row > * {
     margin-right: 16px;
   }
+}
+.cta-row {
+  margin-top: 20px; /* Added to ensure space below calendar */
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 /*****************************************
@@ -393,7 +403,9 @@ header {
     margin-top: var(--header-height);
     border-left: var(--border);
     padding-top: 8px;
-    z-index: 0;
+    z-index: 0; /* Ensure behind calendar */
+    /* Prevent overlap by limiting right edge */
+    max-width: calc(100% - var(--sidebar-width));
   }
 }
 
@@ -664,6 +676,7 @@ header {
   grid-template-columns: 1fr; /* Single column for mobile */
   border-top: var(--border);
   width: 100%; /* Ensure it takes full width */
+  max-width: calc(100% - var(--sidebar-width)); /* Prevent overlap with sidebar */
   box-sizing: border-box;
   position: relative; /* Ensure z-index applies */
   z-index: 1; /* Ensure calendar is above other elements if needed */
@@ -705,6 +718,7 @@ header {
     border-top: none;
     min-height: 436px; /* 36px (header) + 4 * 100px (rows) */
     width: 100%;
+    max-width: calc(100% - var(--sidebar-width)); /* Prevent overlap with sidebar */
   }
   /* Ensure day-wrapper children participate in the grid */
   .day-wrapper {
@@ -730,7 +744,7 @@ header {
   .day-wrapper:nth-child(3) .class-details:nth-child(2) { grid-column: 3; grid-row: 3; } /* Wed 4:15-5pm */
   .day-wrapper:nth-child(3) .class-details:nth-child(3) { grid-column: 3; grid-row: 4; } /* Wed 5-6pm */
   /* Thursday */
-  .day-wrapper:nth-child(4) .class-details:nth-child(2) { grid-column: 4; grid-row 4; } /* Thu 5-6pm */
+  .day-wrapper:nth-child(4) .class-details:nth-child(2) { grid-column: 4; grid-row: 4; } /* Thu 5-6pm */
   /* Friday */
   .day-wrapper:nth-child(5) .class-details:nth-child(2) { grid-column: 5; grid-row: 3; } /* Fri 4-5pm */
   .day-wrapper:nth-child(5) .class-details:nth-child(3) { grid-column: 5; grid-row: 4; } /* Fri 5-6pm */
@@ -744,6 +758,7 @@ header {
     display: none !important; /* Force hide empty details */
     height: 0;
     padding: 0;
+    border: none; /* Remove any residual border */
   }
 }
 .class-day-of-week,
