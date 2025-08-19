@@ -638,158 +638,96 @@ header {
   display: grid;
   grid-template-columns: 1fr; /* Single column for mobile */
   border-top: var(--border);
-  width: 100%; /* Ensure it takes full width */
-  max-width: calc(100% - var(--sidebar-width)); /* Prevent overlap with sidebar */
-  min-width: 0; /* Allow shrinking */
+  width: 100%;
+  max-width: calc(100% - var(--sidebar-width)); /* Prevent sidebar overlap */
   box-sizing: border-box;
-  position: relative; /* Ensure z-index applies */
-  z-index: 1; /* Ensure calendar is above other elements if needed */
+  position: relative;
+  z-index: 1;
 }
+
 @media (max-width: 700px) {
   .calendar {
     grid-template-columns: 1fr;
-    grid-template-rows: auto; /* Let rows size naturally */
   }
   .day-wrapper {
-    margin-bottom: 16px; /* Space between days */
+    margin-bottom: 24px; /* Increased spacing between days */
   }
   .class-day-of-week {
-    font-size: 18px; /* Larger for header */
-    padding: 10px 4px;
-    border-bottom: 3px solid #000; /* Strong separator */
-    background-color: #e0e0e0; /* Distinct background */
-    display: block; /* Ensure full width */
+    font-family: "Satoshi", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 3px solid #000;
+    background-color: #e0e0e0;
+    display: block;
+    text-align: left;
   }
-  .class-details {
-    padding: 8px 4px 8px 20px; /* Indent for hierarchy */
-    font-size: 14px;
-    border-bottom: 1px dashed #999; /* Lighter separator */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .class-details:empty {
-    display: none; /* Hide empty details */
-  }
-  .only-class-of-the-day {
-    padding: 8px 4px 8px 20px; /* Match indentation */
+  .class-details, .only-class-of-the-day {
+    padding: 10px 10px 10px 20px; /* Consistent padding with indent */
     font-size: 14px;
     border-bottom: 1px dashed #999;
-  }
-}
-@media (min-width: 700px) {
-  .calendar {
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 36px; /* Header row only */
-    grid-auto-rows: 120px; /* Dynamically create rows per class with more space */
-    grid-auto-flow: row;
-    border-top: none;
-    width: 100%;
-    max-width: calc(100% - var(--sidebar-width)); /* Prevent overlap with sidebar */
-  }
-  /* Ensure day-wrapper children participate in the grid */
-  .day-wrapper {
-    display: contents; /* Allow children to participate in grid layout */
-  }
-  /* Explicitly position day headers in the first row and correct columns */
-  .day-wrapper:nth-child(1) .class-day-of-week { grid-column: 1; grid-row: 1; } /* Mon */
-  .day-wrapper:nth-child(2) .class-day-of-week { grid-column: 2; grid-row: 1; } /* Tue */
-  .day-wrapper:nth-child(3) .class-day-of-week { grid-column: 3; grid-row: 1; } /* Wed */
-  .day-wrapper:nth-child(4) .class-day-of-week { grid-column: 4; grid-row: 1; } /* Thu */
-  .day-wrapper:nth-child(5) .class-day-of-week { grid-column: 5; grid-row: 1; } /* Fri */
-  .day-wrapper:nth-child(6) .class-day-of-week { grid-column: 6; grid-row: 1; } /* Sat */
-  .day-wrapper:nth-child(7) .class-day-of-week { grid-column: 7; grid-row: 1; } /* Sun */
-  /* Position details within each day-wrapper with explicit columns */
-  /* Monday (4 classes) */
-  .day-wrapper:nth-child(1) .class-details:nth-child(2) { grid-column: 1; grid-row: 2; } /* 10-11:30am Adults BJJ Gi */
-  .day-wrapper:nth-child(1) .class-details:nth-child(3) { grid-column: 1; grid-row: 3; } /* 4:15-5pm Youth 5-7 Gi */
-  .day-wrapper:nth-child(1) .class-details:nth-child(4) { grid-column: 1; grid-row: 4; } /* 5-6pm Youth 8-14 Gi */
-  .day-wrapper:nth-child(1) .class-details:nth-child(5) { grid-column: 1; grid-row: 5; } /* 6-7:30pm Adults BJJ Gi */
-  /* Tuesday (3 classes) */
-  .day-wrapper:nth-child(2) .class-details:nth-child(2) { grid-column: 2; grid-row: 2; } /* 10-11:30am Adults BJJ No-gi */
-  .day-wrapper:nth-child(2) .class-details:nth-child(3) { grid-column: 2; grid-row: 3; } /* 5-6pm Youth 8-14 No-gi */
-  .day-wrapper:nth-child(2) .class-details:nth-child(4) { grid-column: 2; grid-row: 4; } /* 6-7:30pm Adults BJJ No-gi */
-  /* Wednesday (3 classes) */
-  .day-wrapper:nth-child(3) .class-details:nth-child(2) { grid-column: 3; grid-row: 2; } /* 4:15-5pm Youth 5-7 Gi */
-  .day-wrapper:nth-child(3) .class-details:nth-child(3) { grid-column: 3; grid-row: 3; } /* 5-6pm Youth 8-14 Gi */
-  .day-wrapper:nth-child(3) .class-details:nth-child(4) { grid-column: 3; grid-row: 4; } /* 6-7:30pm Adults BJJ Gi */
-  /* Thursday (3 classes) */
-  .day-wrapper:nth-child(4) .class-details:nth-child(2) { grid-column: 4; grid-row: 2; } /* 5-6pm Youth 8-14 No-gi */
-  .day-wrapper:nth-child(4) .class-details:nth-child(3) { grid-column: 4; grid-row: 3; } /* 6-7:30pm Adults BJJ No-gi */
-  .day-wrapper:nth-child(4) .class-details:nth-child(4) { grid-column: 4; grid-row: 4; } /* 7:30-9pm Open Sparring No-gi */
-  /* Friday (1 class) */
-  .day-wrapper:nth-child(5) .class-details:nth-child(2) { grid-column: 5; grid-row: 2; } /* 4-6pm Open Instruction Gi and No-gi */
-  /* Saturday (2 classes) */
-  .day-wrapper:nth-child(6) .class-details:nth-child(2) { grid-column: 6; grid-row: 2; } /* 10-11:30am Womens BJJ Gi */
-  .day-wrapper:nth-child(6) .class-details:nth-child(3) { grid-column: 6; grid-row: 3; } /* 12-1pm Open Mat Gi or No-gi */
-  /* Sunday (1 class) */
-  .day-wrapper:nth-child(7) .only-class-of-the-day:nth-child(2) { grid-column: 7; grid-row: 2 / span 4; } /* Rest (no classes) */
-  /* Styling for text wrapping and alignment */
-  .class-details {
-    word-break: break-word;
-    overflow-wrap: break-word;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 8px;
-    border-left: var(--border);
-    border-bottom: none;
+    gap: 4px; /* Space between time, name, dress */
   }
-  .class-time, .class-name, .class-dress {
-    margin: 2px 0;
-  }
-  /* Ensure empty details don’t affect layout */
   .class-details:empty {
-    display: none !important; /* Force hide empty details */
-    height: 0;
-    padding: 0;
-    border: none; /* Remove any residual border */
+    display: none;
   }
 }
-.class-day-of-week,
-.class-details {
-  border-bottom: var(--border);
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
+
 @media (min-width: 700px) {
-  .class-day-of-week,
-  .class-details {
+  .calendar {
+    grid-template-columns: repeat(7, minmax(140px, 1fr)); /* Wider columns for readability */
+    grid-auto-rows: auto; /* Rows size by content */
+    border-top: none;
+  }
+  .day-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border-left: var(--border);
-    padding: 8px;
+  }
+  .class-day-of-week {
+    font-family: "Satoshi", sans-serif;
+    font-weight: bold;
+    font-size: 18px; /* Slightly smaller for better fit */
+    padding: 10px;
+    border-bottom: var(--border);
+    text-align: center;
+    background-color: #f5f5f5; /* Subtle background for headers */
+  }
+  .class-details, .only-class-of-the-day {
+    padding: 10px;
+    border-bottom: var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100px; /* Ensure enough space for Monday’s 4 classes */
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    gap: 4px; /* Space between time, name, dress */
+  }
+  .class-details:empty {
+    display: none;
+  }
+  .class-time {
+    opacity: 0.7;
+    font-size: 13px;
+  }
+  .class-name {
+    font-weight: bold;
+  }
+  .class-dress {
+    font-size: 13px;
   }
 }
-.class-day-of-week {
-  font-family: "Satoshi", sans-serif;
-  font-weight: bold;
-  line-height: 1;
-  font-size: 20px;
-}
-.class-details:empty {
-  border-bottom: none;
-}
-@media (min-width: 700px) {
-  .class-details {
-    padding-bottom: 16px;
-    border-bottom: none;
-  }
-}
-.class-time {
-  opacity: 0.7;
-}
-.class-name {
-  font-weight: bold;
-}
-.only-class-of-the-day {
-  grid-column: span 3;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-@media (min-width: 700px) {
-  .only-class-of-the-day {
-    grid-row: 2 / span 4;
-    grid-column: inherit;
-    padding: 8px;
+
+/* Ensure sidebar doesn’t overlap */
+@media (min-width: 1100px) {
+  .calendar {
+    max-width: calc(100% - var(--sidebar-width) - 20px); /* Extra padding to avoid overlap */
   }
 }
 // INSTRUCTORS SECTION
