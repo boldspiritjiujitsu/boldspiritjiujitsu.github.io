@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -19,7 +20,7 @@
 */
 body {
   line-height: 1.5;
-  /* -webkit-font-smoothing: antialiased; */
+  /*  -webkit-font-smoothing: antialiased;*/
 }
 
 /*
@@ -149,14 +150,6 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-right: 16px;
   }
 }
-.cta-row {
-  margin-top: 20px; /* Added to ensure space below calendar */
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-}
 
 /*****************************************
 			  HTML ELEMENTS
@@ -238,18 +231,18 @@ p {
   margin-bottom: 16px;
 }
 
-main section, main .about-wrapper {
+main section {
   margin: 0 auto 120px;
   max-width: 1000px;
   padding: 0 12px;
 }
 @media (min-width: 800px) {
-  main section, main .about-wrapper {
+  main section {
     margin-bottom: 200px;
   }
 }
 @media (min-width: 1100px) {
-  main section, main .about-wrapper {
+  main section {
     max-width: 1160px;
     padding-top: var(--header-height);
     padding-right: var(--sidebar-width);
@@ -257,10 +250,16 @@ main section, main .about-wrapper {
   }
 }
 @media (min-width: 1200px) {
-  main section, main .about-wrapper {
+  main section {
     margin-bottom: 300px;
     padding-left: 0;
   }
+}
+main section a {
+  color: var(--red);
+}
+main section ul {
+  margin-bottom: 16px;
 }
 
 /*****************************************
@@ -403,9 +402,7 @@ header {
     margin-top: var(--header-height);
     border-left: var(--border);
     padding-top: 8px;
-    z-index: 0; /* Ensure behind calendar */
-    /* Prevent overlap by limiting right edge */
-    max-width: calc(100% - var(--sidebar-width));
+    z-index: 2;
   }
 }
 
@@ -665,12 +662,6 @@ header {
   border-bottom: none;
 }
 
-#schedule {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
-}
 .calendar {
   display: grid;
   grid-template-columns: 1fr; /* Single column for mobile */
@@ -682,12 +673,21 @@ header {
   z-index: 1;
 }
 
+.class-day-of-week {
+  display: block;
+  width: 100%;
+}
+
+.class-details {
+  width: 100%;
+}
+
 @media (max-width: 700px) {
   .calendar {
     grid-template-columns: 1fr;
   }
   .day-wrapper {
-    margin-bottom: 24px;
+    margin-bottom: 24px; /* Increased spacing between days */
   }
   .class-day-of-week {
     font-family: "Satoshi", sans-serif;
@@ -699,52 +699,51 @@ header {
     display: block;
     text-align: left;
   }
-  .class-details {
-    padding: 10px 10px 10px 20px;
+  .class-details, .only-class-of-the-day {
+    padding: 10px 10px 10px 20px; /* Consistent padding with indent */
     font-size: 14px;
     border-bottom: 1px dashed #999;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 4px; /* Space between time, name, dress */
   }
   .class-details:empty {
     display: none;
   }
 }
-
 @media (min-width: 700px) {
   .calendar {
-    grid-template-columns: repeat(7, minmax(140px, 1fr)); /* 7 columns for days */
-    grid-auto-rows: auto; /* Let rows size dynamically */
+    grid-template-columns: repeat(7, 1fr); /* Wider columns for readability */
+    grid-auto-rows: auto; /* Rows size by content */
     border-top: none;
   }
   .day-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Ensure full width for children */
+    align-items: flex-start;
     border-left: var(--border);
   }
   .class-day-of-week {
     font-family: "Satoshi", sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 18px; /* Slightly smaller for better fit */
     padding: 10px;
     border-bottom: var(--border);
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Subtle background for headers */
   }
-  .class-details {
+  .class-details, .only-class-of-the-day {
     padding: 10px;
     border-bottom: var(--border);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-height: 100px; /* Minimum height for consistency */
+    min-height: 100px; /* Ensure enough space for Monday’s 4 classes */
     word-break: break-word;
     overflow-wrap: break-word;
     font-size: 14px;
-    gap: 4px;
+    gap: 4px; /* Space between time, name, dress */
   }
   .class-details:empty {
     display: none;
@@ -759,36 +758,20 @@ header {
   .class-dress {
     font-size: 13px;
   }
-  /* Ensure Monday’s 4 classes create 4 rows */
-  .day-wrapper:nth-child(1) .class-details {
-    min-height: 100px; /* Consistent height for Monday’s classes */
-  }
-  /* Adjust other days to align with Monday’s row heights */
-  .day-wrapper:not(:nth-child(1)) .class-details {
-    min-height: 100px; /* Match Monday’s row height */
-  }
-  /* Ensure Sunday’s single class aligns properly */
-  .day-wrapper:nth-child(7) .class-details {
-    min-height: 100px;
-  }
 }
-
-/* Prevent sidebar overlap */
+/* Ensure sidebar doesn’t overlap */
 @media (min-width: 1100px) {
   .calendar {
-    max-width: calc(100% - var(--sidebar-width) - 20px);
+    max-width: calc(100% - var(--sidebar-width) - 20px); /* Extra padding to avoid overlap */
   }
 }
-
-/* Ensure CTA row is properly spaced */
-.cta-row {
-  margin-top: 20px;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
+.instructor-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 32px;
 }
+
 .instructor {
   display: flex;
 }
@@ -928,6 +911,6 @@ footer a:hover {
   text-align: center;
 }
 
-footer ~ div > section, footer ~ div > .about-wrapper {
+footer ~ div > section {
   margin-bottom: 0;
 }

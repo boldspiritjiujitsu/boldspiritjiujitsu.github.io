@@ -457,6 +457,17 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/img\/Adults_Class.webp" : {
+      "ft" : 8388608,
+      "iS" : 602272,
+      "oA" : 0,
+      "oAP" : "\/img\/Adults_Class.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/img\/black-belt.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -549,6 +560,50 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/img\/Jorgi_Class.webp" : {
+      "ft" : 8388608,
+      "iS" : 1240960,
+      "oA" : 0,
+      "oAP" : "\/img\/Jorgi_Class.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Jorgi_Headshot.webp" : {
+      "ft" : 8388608,
+      "iS" : 1680076,
+      "oA" : 0,
+      "oAP" : "\/img\/Jorgi_Headshot.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Jorgi_Purple_Belt.webp" : {
+      "ft" : 8388608,
+      "iS" : 2034260,
+      "oA" : 0,
+      "oAP" : "\/img\/Jorgi_Purple_Belt.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Kids_Class.webp" : {
+      "ft" : 8388608,
+      "iS" : 2319032,
+      "oA" : 0,
+      "oAP" : "\/img\/Kids_Class.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/img\/logo-tall-white.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -603,6 +658,173 @@
       "ou" : "lpckwebp-default",
       "rq" : 75
     },
+    "\/img\/Mychal_Black_Belt.webp" : {
+      "ft" : 8388608,
+      "iS" : 1902080,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Black_Belt.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Headshot.webp" : {
+      "ft" : 8388608,
+      "iS" : 1732030,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Headshot.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Issac.webp" : {
+      "ft" : 8388608,
+      "iS" : 31336,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Issac.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Jorgi_Above.webp" : {
+      "ft" : 8388608,
+      "iS" : 15032,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Jorgi_Above.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Jorgi_Brighten.webp" : {
+      "ft" : 8388608,
+      "iS" : 64660,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Jorgi_Brighten.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Jorgi_Cropped.webp" : {
+      "ft" : 8388608,
+      "iS" : 23160,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Jorgi_Cropped.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Jorgi_resized.jpg" : {
+      "ft" : 16384,
+      "iS" : 57745,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Jorgi_resized.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/Mychal_Jorgi_resized.webp" : {
+      "ft" : 8388608,
+      "iS" : 48330,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Jorgi_resized.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Jorgi_Side_Control_Escape (1).webp" : {
+      "ft" : 8388608,
+      "iS" : 20512,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Jorgi_Side_Control_Escape (1).webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Jorgi_Side_Control_Escape.webp" : {
+      "ft" : 8388608,
+      "iS" : 72768,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Jorgi_Side_Control_Escape.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Professor_Photo.webp" : {
+      "ft" : 8388608,
+      "iS" : 962078,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Professor_Photo.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Travis_Landscape.webp" : {
+      "ft" : 8388608,
+      "iS" : 1326524,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Travis_Landscape.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Will_cropped.webp" : {
+      "ft" : 8388608,
+      "iS" : 18184,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Will_cropped.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Will_Mount (1).webp" : {
+      "ft" : 8388608,
+      "iS" : 45960,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Will_Mount (1).webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Mychal_Will_Mount.webp" : {
+      "ft" : 8388608,
+      "iS" : 708460,
+      "oA" : 0,
+      "oAP" : "\/img\/Mychal_Will_Mount.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/img\/mychal.png" : {
       "ft" : 32768,
       "iS" : 58815,
@@ -616,6 +838,17 @@
       "q" : 90,
       "rq" : 75
     },
+    "\/img\/phantom-bjj.webp" : {
+      "ft" : 8388608,
+      "iS" : 21924,
+      "oA" : 0,
+      "oAP" : "\/img\/phantom-bjj.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
     "\/img\/purple-belt.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -625,6 +858,17 @@
       "opt" : 0,
       "plM" : 52780316221407,
       "prP" : 0
+    },
+    "\/img\/Shelby_Serenity_Back_Take.webp" : {
+      "ft" : 8388608,
+      "iS" : 208456,
+      "oA" : 0,
+      "oAP" : "\/img\/Shelby_Serenity_Back_Take.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
     },
     "\/img\/sign-up.jpg" : {
       "ft" : 16384,
@@ -637,6 +881,39 @@
       "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/Travis_Headshot.webp" : {
+      "ft" : 8388608,
+      "iS" : 1993484,
+      "oA" : 0,
+      "oAP" : "\/img\/Travis_Headshot.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Travis_Mychal_Butterfly.webp" : {
+      "ft" : 8388608,
+      "iS" : 1353780,
+      "oA" : 0,
+      "oAP" : "\/img\/Travis_Mychal_Butterfly.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
+      "rq" : 75
+    },
+    "\/img\/Travis_New_Photo.webp" : {
+      "ft" : 8388608,
+      "iS" : 780672,
+      "oA" : 0,
+      "oAP" : "\/img\/Travis_New_Photo.webp",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-default",
       "rq" : 75
     },
     "\/index.html" : {
